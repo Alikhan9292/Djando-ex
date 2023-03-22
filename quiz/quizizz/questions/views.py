@@ -1,9 +1,11 @@
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, HttpResponseForbidden, \
     HttpResponseServerError
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Страница приложения questions.")
+    return render(request, 'questions/index.html')
+
 
 def categories(request, catid):
     if (request.POST):

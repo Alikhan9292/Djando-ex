@@ -20,7 +20,7 @@ from django.urls import path, include
 from quizizz import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='home'),
     path('', include('questions.urls')),
 ]
 
