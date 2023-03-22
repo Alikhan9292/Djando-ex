@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Default Title{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
         {% block header %}
-        <h1>Default Header</h1>
+        <h1>Welcome to my blog</h1>
         {% endblock %}
     </header>
     <main>
-        {% block content %}
-        <p>Default Content</p>
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
-    <footer>
-        {% block footer %}
-        <p>Default Footer</p>
-        {% endblock %}
-    </footer>
 </body>
 </html>
