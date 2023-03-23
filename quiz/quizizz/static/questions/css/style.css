@@ -1,0 +1,26 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  background-image: url("/questions/images/bg.jpg");
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}

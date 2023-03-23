@@ -1,7 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f8f8;
-  background-image: url("/questions/images/bg.jpg");
+  background-image: url("/static/questions/images/bg.jpg");
   background-size: cover;
 }
 
