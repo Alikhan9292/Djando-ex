@@ -6,6 +6,14 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'questions/index.html')
+def quiz(request):
+    return render(request, 'questions/quiz.html')
+
+def about(request):
+    return render(request, 'questions/about.html')
+
+def contact(request):
+    return render(request, 'questions/contact.html')
 
 
 def categories(request, catid):

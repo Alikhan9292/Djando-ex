@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% load static %}
-    <link type="text/css" href="{% static 'questions/css/style.css' %}"  rel="stylesheet">
-</head>
-<body>
-    <header>
-        {% block header %}
-        <h1>Добро пожаловать на викторину!</h1>
-        {% endblock %}
-    </header>
-    <main>
-        {% block content %}
-          <h2>Наша викторина.</h2>
-          <p>Проверьте свои знания с помощью нашей веселой викторины! Отвечайте на вопросы по самым разным темам и посмотрите, чем вы отличаетесь от других.</p>
-          <a href="/index/">Начать викторину!</a>
-        {% endblock %}
-    </main>
-</body>
-</html>
+{% extends 'questions/base.html' %}
+{% block header %}
+<header>
+    <h1>Добро пожаловать на викторину!</h1>
+</header>
+{% endblock %}
+
+{% block content %}
+<main>
+    <h2>Наша викторина.</h2>
+    <p>Проверьте свои знания с помощью нашей веселой викторины! Отвечайте на вопросы по самым разным темам и посмотрите, чем вы отличаетесь от других.</p>
+    <a href="/index/">Начать викторину!</a>
+</main>
+{% endblock %}
