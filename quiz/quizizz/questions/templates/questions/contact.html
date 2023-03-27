@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Контакты | Название вашего проекта</title>
-  </head>
-  <body>
-    <h1>Контакты</h1>
-    <p>Свяжитесь с нами, используя следующие контактные данные:</p>
-    <ul>
-      <li>Email: info@yourdomain.com</li>
-      <li>Телефон: +1 (555) 123-4567</li>
-      <li>Адрес: ул. Название, г. Город, страна</li>
-    </ul>
-  </body>
-</html>
+{% extends 'questions/base.html' %}
+
+{% block content %}
+  <h2>Contact Us</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+  </form>
+{% endblock %}

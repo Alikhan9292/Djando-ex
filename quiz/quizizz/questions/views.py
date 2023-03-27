@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, HttpResponseForbidden, \
     HttpResponseServerError
 from django.shortcuts import render
+from .forms import ContactForm
 
 from .models import *
 
@@ -21,6 +22,18 @@ def contact(request):
 def quiz_detail(request):
     # реализация логики для отображения викторины
     return render(request, 'questions/quiz_detail.html')
+
+
+
+def contact(request):
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # обработка формы
+            pass
+    return render(request, 'questions/contact.html', {'form': form})
+
 
 
 def categories(request, catid):
