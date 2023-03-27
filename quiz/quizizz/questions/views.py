@@ -1,19 +1,26 @@
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, HttpResponseForbidden, \
     HttpResponseServerError
-from .models import Question
 from django.shortcuts import render
+
+from .models import *
+
 
 
 def index(request):
-    return render(request, 'questions/index.html')
+    posts = Quiz.objects.all()
+    return render(request, 'questions/index.html', {'posts': posts})
 def quiz(request):
-    return render(request, 'questions/quiz.html')
+    return render(request, 'questions/index.html')
 
 def about(request):
     return render(request, 'questions/about.html')
 
 def contact(request):
     return render(request, 'questions/contact.html')
+
+def quiz_detail(request):
+    # реализация логики для отображения викторины
+    return render(request, 'questions/quiz_detail.html')
 
 
 def categories(request, catid):
